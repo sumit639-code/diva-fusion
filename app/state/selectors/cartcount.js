@@ -1,6 +1,6 @@
 // selectors.js
 import { selector } from "recoil";
-import { cartState } from "../atoms/Cartstate";
+import { cartState } from "../atoms/Cartstate.js";
 
 
 export const cartItemCount = selector({
