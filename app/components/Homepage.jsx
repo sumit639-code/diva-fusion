@@ -1,6 +1,9 @@
 import React from "react";
 import Product from "./product";
 import { Data } from "@/Data/data";
+import Link from "next/link";
+import Recomended from "./Recomended";
+import { FaArrowRightLong } from "react-icons/fa6";
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-pink-50 p-4 mb-10">
@@ -93,9 +96,12 @@ const HomePage = () => {
           className="w-full h-full opacity-40 absolute top-0 left-0"
         />
         <div className="flex justify-between items-center">
-          <button className="bg-red-400 text-white py-2 px-4 rounded-lg shadow hover:bg-red-500 z-10">
+          <Link
+            href="/recomended"
+            className="bg-red-400 text-white py-2 px-4 rounded-lg shadow hover:bg-red-500 z-10"
+          >
             Order Now
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -133,18 +139,20 @@ const HomePage = () => {
       </div>
 
       <div>
-        <h3 className="text-lg font-bold mb-4 text-black">
-          Recommended for you
-        </h3>
+        <Link
+          href="/recomended"
+          className="text-lg font-bold mb-4 text-black flex items-center "
+        >
+          <div>Recommended for you</div>
+          <FaArrowRightLong className="ml-2" />
+        </Link>
         <div className="flex space-x-4 overflow-x-scroll">
           {Data.map((fn) => (
-            
-            <Product props={fn} key={fn.id}/>
+            <Product props={fn} key={fn.id} />
           ))}
+          {/* <Recomended/> */}
         </div>
       </div>
-
-      
     </div>
   );
 };

@@ -16,7 +16,7 @@ export const Data = [
     price: 3000,
   },
   {
-    id: 3,
+    id:2,
     title: "cotton dress",
     image: "",
     desc: "",
