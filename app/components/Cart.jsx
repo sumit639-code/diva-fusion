@@ -1,5 +1,5 @@
 import React from "react";
-import { cartState } from "../state/atoms/Cartstate";
+import { cartState } from "../state/atoms/Cartstate.js";
 import { useRecoilState } from "recoil";
 
 const Cart = ({ props }) => {

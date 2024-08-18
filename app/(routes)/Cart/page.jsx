@@ -1,7 +1,7 @@
 "use client";
 import Cart from "@/app/components/Cart";
-import { cartState } from "@/app/state/atoms/Cartstate";
-import { cartTotalPrice } from "@/app/state/selectors/totalprice";
+import { cartState } from "@/app/state/atoms/Cartstate.js";
+import { cartTotalPrice } from "@/app/state/selectors/totalprice.js";
 import Link from "next/link";
 import React from "react";
 import { useRecoilValue } from "recoil";

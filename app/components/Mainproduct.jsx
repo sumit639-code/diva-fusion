@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { useRecoilState } from "recoil";
-import { likeState } from "../state/atoms/Likestate";
+import { likeState } from "../state/atoms/Likestate.js";
 
 const Product = ({ props }) => {
   const [likestate, setLikeState] = useRecoilState(likeState);

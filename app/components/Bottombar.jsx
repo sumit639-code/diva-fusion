@@ -6,10 +6,10 @@ import { IoCartOutline } from "react-icons/io5";
 import { BiCategory } from "react-icons/bi";
 import Link from "next/link";
 import { useRecoilValue } from "recoil";
-import { cartItemCount } from "../state/selectors/Cartcount";
-import { cartState } from "../state/atoms/Cartstate";
-import { likeState } from "../state/atoms/Likestate";
-import { likeItemCount } from "../state/selectors/likecount";
+import { cartItemCount } from "../state/selectors/Cartcount.js";
+import { cartState } from "../state/atoms/Cartstate.js";
+import { likeState } from "../state/atoms/Likestate.js";
+import { likeItemCount } from "../state/selectors/likecount.js";
 
 const Bottombar = () => {
   const cartItem = useRecoilValue(cartState);

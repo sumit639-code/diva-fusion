@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "./product";
+import Product from "./Product";
 import { Data } from "@/Data/data";
 import Link from "next/link";
 import Recomended from "./Recomended";
