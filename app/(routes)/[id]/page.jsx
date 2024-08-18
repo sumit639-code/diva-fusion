@@ -1,8 +1,11 @@
 "use client";
+import { cartState } from "@/app/state/atoms/Cartstate";
 import { combined } from "@/Data/combinedata";
 import React, { useState, useEffect } from "react";
 import { IoCartOutline } from "react-icons/io5";
+import { useRecoilState } from "recoil";
 const ProductPage = ({ params }) => {
+  const [recoil, setRecoil] = useRecoilState(cartState);
   const [product, setProduct] = useState(null);
   const { id } = params;
 
@@ -17,6 +20,31 @@ const ProductPage = ({ params }) => {
     return <div>Loading...</div>; // Optional: A loading state if product is not found yet
   }
 
+  const handleClick = () => {
+    if (product) {
+      // Check if product is already in the cart
+      const existingProductIndex = recoil.findIndex(
+        (item) => item.id === product.id
+      );
+
+      if (existingProductIndex > -1) {
+        // Product exists in the cart, update its quantity
+        const updatedRecoil = [...recoil];
+        updatedRecoil[existingProductIndex] = {
+          ...updatedRecoil[existingProductIndex],
+          quantity: updatedRecoil[existingProductIndex].quantity
+            ? updatedRecoil[existingProductIndex].quantity + 1
+            : 1,
+        };
+        setRecoil(updatedRecoil);
+      } else {
+        // Product does not exist, add it to the cart with quantity 1
+        setRecoil([...recoil, { ...product, quantity: 1 }]);
+      }
+    } else {
+      console.error("Invalid product data");
+    }
+  };
   return (
     <div className="flex justify-center p-1">
       <div className="flex flex-col md:flex-row lg:flex-row md:space-x-16 lg:space-x-24 md:p-8 lg:p-12">
@@ -40,7 +68,10 @@ const ProductPage = ({ params }) => {
           <p className="text-red-500 font-semibold text-lg md:text-xl lg:text-2xl mb-4">
             ₹{product.price}
           </p>
-          <button className="w-full bg-red-400 text-white py-2 px-4 rounded-lg shadow hover:bg-red-500 flex items-center justify-center space-x-3">
+          <button
+            onClick={handleClick}
+            className="w-full bg-red-400 text-white py-2 px-4 rounded-lg shadow hover:bg-red-500 flex items-center justify-center space-x-3"
+          >
             <div>Add to cart</div>
             <IoCartOutline />
           </button>

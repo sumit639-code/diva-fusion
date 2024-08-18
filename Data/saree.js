@@ -5,6 +5,7 @@ export const sarees = [
     image: "../saree.png",
     description: "Cotton sareen with Creative design",
     price: 2500,
+    quantity:1
   },
   {
     id: 200,
@@ -12,6 +13,7 @@ export const sarees = [
     description: "Cotton sareen with Creative design",
     image: "#",
     price: 1500,
+    quantity:1
   },
   {
     id: 300,
@@ -19,6 +21,7 @@ export const sarees = [
     description: "Cotton sareen with Creative design",
     image: "#",
     price: 5000,
+    quantity:1
   },
   {
     id: 400,
@@ -26,6 +29,7 @@ export const sarees = [
     image: "../saree.png",
     description: "Cotton sareen with Creative design",
     price: 2500,
+    quantity:1
   },
   {
     id: 500,
@@ -33,6 +37,7 @@ export const sarees = [
     description: "Cotton sareen with Creative design",
     image: "#",
     price: 1500,
+    quantity:1
   },
   {
     id: 600,
@@ -40,6 +45,7 @@ export const sarees = [
     description: "Cotton sareen with Creative design",
     image: "#",
     price: 5000,
+    quantity:1
   },
   // Add more sarees as needed
 ];
