@@ -8,10 +8,14 @@ import Link from "next/link";
 import { useRecoilValue } from "recoil";
 import { cartItemCount } from "../state/selectors/Cartcount";
 import { cartState } from "../state/atoms/Cartstate";
+import { likeState } from "../state/atoms/Likestate";
+import { likeItemCount } from "../state/selectors/likecount";
 
 const Bottombar = () => {
   const cartItem = useRecoilValue(cartState);
   const itemCount = useRecoilValue(cartItemCount);
+  const likeItem = useRecoilValue(likeState);
+  const likeCount = useRecoilValue(likeItemCount);
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-pink-200 p-4 flex justify-around items-center rounded-t-xl shadow-lg">
       <Link href="/" className="text-black">
@@ -20,7 +24,12 @@ const Bottombar = () => {
       <Link href="/Category" className="text-black">
         <BiCategory size={25} />
       </Link>
-      <Link href="/Likes" className="text-black">
+      <Link href="/Likes" className="text-black relative">
+        {likeItem.length === 0 ? null : (
+          <span className="absolute -top-1 -right-2 bg-[#cd3a21] w-4 h-4 flex items-center justify-center rounded-full text-white text-xs transition-all duration-400">
+            {likeCount}
+          </span>
+        )}
         <FaRegHeart size={22} />
       </Link>
       <Link href="/Cart" className="text-black">

@@ -26,22 +26,7 @@ const HomePage = () => {
               ></path>
             </svg>
           </button>
-          <button>
-            <svg
-              className="w-6 h-6 text-black"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6H20M4 12H20m-7 6H20"
-              ></path>
-            </svg>
-          </button>
+          
         </div>
       </header>
 
