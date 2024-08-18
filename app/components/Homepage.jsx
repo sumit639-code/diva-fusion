@@ -26,7 +26,6 @@ const HomePage = () => {
               ></path>
             </svg>
           </button>
-          
         </div>
       </header>
 
@@ -96,30 +95,42 @@ const HomePage = () => {
           <button className="text-sm text-red-400">See All</button>
         </div>
         <div className="flex justify-between">
-          <div className="flex flex-col items-center">
+          <Link
+            href="./Cloths-dress/Saree"
+            className="flex flex-col items-center"
+          >
             <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
               <img src="./saree.png" alt="Skin Care" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Saree</p>
-          </div>
-          <div className="flex flex-col items-center">
+          </Link>
+          <Link
+            href="./Cloths-dress/Kurti"
+            className="flex flex-col items-center"
+          >
             <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
               <img src="./dress.png" alt="Make Up" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Kurti</p>
-          </div>
-          <div className="flex flex-col items-center">
+          </Link>
+          <Link
+            href="./Cloths-dress/Jwellery"
+            className="flex flex-col items-center"
+          >
             <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
               <img src="./necklace.png" alt="Fashion" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Jwellery</p>
-          </div>
-          <div className="flex flex-col items-center">
+          </Link>
+          <Link
+            href="./Cloths-dress/Silk"
+            className="flex flex-col items-center"
+          >
             <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
               <img src="./silk.png" alt="Shoes" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Silk</p>
-          </div>
+          </Link>
         </div>
       </div>
 
