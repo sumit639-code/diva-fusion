@@ -96,7 +96,7 @@ const HomePage = () => {
         </div>
         <div className="flex justify-between">
           <Link
-            href="./Cloths-dress/Saree"
+            href="/Cloths-dress/Saree"
             className="flex flex-col items-center"
           >
             <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
@@ -105,7 +105,7 @@ const HomePage = () => {
             <p className="text-xs mt-2 text-black">Saree</p>
           </Link>
           <Link
-            href="./Cloths-dress/Kurti"
+            href="/Cloths-dress/Kurti"
             className="flex flex-col items-center"
           >
             <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
@@ -114,7 +114,7 @@ const HomePage = () => {
             <p className="text-xs mt-2 text-black">Kurti</p>
           </Link>
           <Link
-            href="./Cloths-dress/Jwellery"
+            href="/Cloths-dress/Jwellery"
             className="flex flex-col items-center"
           >
             <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
@@ -123,7 +123,7 @@ const HomePage = () => {
             <p className="text-xs mt-2 text-black">Jwellery</p>
           </Link>
           <Link
-            href="./Cloths-dress/Silk"
+            href="/Cloths-dress/Silk"
             className="flex flex-col items-center"
           >
             <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
