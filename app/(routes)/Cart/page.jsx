@@ -32,7 +32,7 @@ const CartPage = () => {
         <span>₹ {totalPrice.toFixed(2)}</span>
       </div>
       <Link
-        href={`https://api.whatsapp.com/send?phone=919937686332&text=Hello%20i%20want%20to%20buy%20${cartItem.map(
+        href={`https://api.whatsapp.com/send?phone=916371413645&text=Hello%20i%20want%20to%20buy%20${cartItem.map(
           textWp
         )}%20,All%20total%20price%20is%20₹${totalPrice}`}
       >
