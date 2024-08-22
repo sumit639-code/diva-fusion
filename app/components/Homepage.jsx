@@ -6,9 +6,9 @@ import Recomended from "./Recomended";
 import { FaArrowRightLong } from "react-icons/fa6";
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-pink-50 p-4 mb-10">
+    <div className="min-h-screen bg-gradient-to-b from-pink-400 to-fuchsia-50 p-4 pb-10 font-primary ">
       <header className="flex justify-between items-center mb-6">
-        <div className="text-xl font-bold text-black">Diva Fusion</div>
+        <div className="text-xl font-bold text-white">Diva Fusion</div>
         <div className="flex space-x-4">
           <button>
             <svg
@@ -69,16 +69,18 @@ const HomePage = () => {
         </button>
       </div>
 
-      <div className="bg-black rounded-xl p-4 shadow-sm mb-6 relative overflow-hidden">
+      <div className="bg-slate-700 rounded-xl p-4 shadow-lg mb-6 relative overflow-hidden ">
+        {/* <video src="./Small-waves.mp4" width="600" height="400" loop={true} autoplay="true"  className=" absolute top-0 left-0"/> */}
         <h2 className="text-lg font-bold mb-2 text-white z-10">Trending Now</h2>
-        <p className="text-sm mb-4 text-white z-10">
+        <p className="text-xs mb-4 text-white z-10 font-secondary font-normal">
           Discount 60% for the first transaction.
         </p>
         <img
           src="./banner.jpg"
           alt="Trending"
-          className="w-full h-full opacity-40 absolute top-0 left-0"
+          className="w-full h-full opacity-25 absolute top-0 left-0"
         />
+
         <div className="flex justify-between items-center">
           <Link
             href="/recomended"
@@ -91,15 +93,17 @@ const HomePage = () => {
 
       <div className="mb-6">
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-lg font-bold text-black">Category</h3>
-          <button className="text-sm text-red-400">See All</button>
+          <h3 className="text-lg font-bold ">Category</h3>
+          <Link href="/Category" className="text-sm text-red-900">
+            See All
+          </Link>
         </div>
         <div className="flex justify-between">
           <Link
             href="/Cloths-dress/Saree"
             className="flex flex-col items-center"
           >
-            <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center shadow-lg">
               <img src="./saree.png" alt="Skin Care" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Saree</p>
@@ -108,7 +112,7 @@ const HomePage = () => {
             href="/Cloths-dress/Kurti"
             className="flex flex-col items-center"
           >
-            <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center shadow-lg">
               <img src="./dress.png" alt="Make Up" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Kurti</p>
@@ -117,7 +121,7 @@ const HomePage = () => {
             href="/Cloths-dress/Jwellery"
             className="flex flex-col items-center"
           >
-            <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center shadow-lg">
               <img src="./necklace.png" alt="Fashion" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Jwellery</p>
@@ -126,7 +130,7 @@ const HomePage = () => {
             href="/Cloths-dress/Silk"
             className="flex flex-col items-center"
           >
-            <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center shadow-lg">
               <img src="./silk.png" alt="Shoes" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Silk</p>
@@ -137,15 +141,21 @@ const HomePage = () => {
       <div>
         <Link
           href="/recomended"
-          className="text-lg font-bold mb-4 text-black flex items-center "
+          className="text-lg font-bold mb-4 text-black flex items-center  "
         >
           <div>Recommended for you</div>
-          <FaArrowRightLong className="ml-2" />
+          <FaArrowRightLong className="text-red-500 ml-2 animate-pulse" />
         </Link>
-        <div className="flex space-x-4 overflow-x-scroll">
+        <div className="flex space-x-4 overflow-x-scroll p-2">
           {Data.map((fn) => (
             <Product props={fn} key={fn.id} />
           ))}
+          <div className="bg-red-50 p-4 rounded-xl w-96 shadow-xl flex items-center justify-center">
+            <Link href="/recomended" className=" p-2 rounded-lg w-32 text-red-400 flex items-center justify-center">
+              View all{" "}
+              <FaArrowRightLong className="text-red-500 ml-2 animate-pulse " />
+            </Link>
+          </div>
           {/* <Recomended/> */}
         </div>
       </div>

@@ -13,13 +13,13 @@ const CartPage = () => {
     return [item.title, " x ", item.quantity].join("");
   }
   return (
-    <div className="min-h-screen bg-pink-50 p-4 md:p-14 lg:px-60 pb-20">
+    <div className="min-h-screen bg-pink-50 p-4 md:p-14 lg:px-60 pb-20 bg-gradient-to-b from-pink-400 to-fuchsia-50 font-primary">
       <header className="flex justify-between items-center mb-6">
-        <div className="text-xl font-bold text-black">Diva Fusion</div>
+        <div className="text-xl font-bold text-white">Diva Fusion</div>
       </header>
 
-      <h2 className="text-2xl font-semibold mb-4 text-black">Cart</h2>
-      <div>
+      <h2 className="text-2xl font-semibold mb-4 text-white">Cart</h2>
+      <div className="text-white font-secondary font-semibold text-sm">
         {cartItem.length === 0 ? (
           <div>Your cart is empty</div>
         ) : (
@@ -36,7 +36,7 @@ const CartPage = () => {
           textWp
         )}%20,All%20total%20price%20is%20₹${totalPrice}`}
       >
-        <button className="w-full mt-4 bg-red-400 text-white py-2 px-4 rounded-lg shadow hover:bg-red-500">
+        <button className="w-full mt-4 bg-red-400 text-white py-2 px-4 transition-all rounded-lg shadow active:scale-[0.9] hover:bg-red-500">
           Order Now
         </button>
       </Link>

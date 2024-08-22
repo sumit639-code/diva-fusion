@@ -3,7 +3,10 @@ import React, { useEffect, useState } from "react";
 import Mainproduct from "@/app/components/Mainproduct"; // Ensure this path is correct
 import { sarees } from "@/Data/saree";
 import { Silk } from "@/Data/silk";
-
+import { FaArrowLeft } from "react-icons/fa6";
+import Link from "next/link";
+import { RiLayoutRowLine } from "react-icons/ri";
+import { RiLayoutGridFill } from "react-icons/ri";
 // Import data
 
 // Combine and shuffle data
@@ -25,10 +28,41 @@ const page = () => {
     // Shuffle data on component mount and set it to state
     setShuffledData(shuffleArray(combinedData));
   }, []);
+  const [layout, setLayout] = useState(2);
+  const [color, setColor] = useState({
+    col1: "white",
+    col2: "black",
+  });
   return (
-    <div className="mb-20 p-1">
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
-        {shuffledData?.map((props) => (
+    <div className="mb-20 p-3 bg-gradient-to-b from-pink-400 to-fuchsia-50 font-primary">
+      <div className=" flex justify-between">
+        <Link href="/Category">
+          {" "}
+          <FaArrowLeft size={25} className="  text-white" />
+        </Link>
+        <div className="text-white text-xl">Sarees</div>
+        <div className="flex space-x-2">
+          {" "}
+          <RiLayoutRowLine
+            size={25}
+            onClick={() => {
+              setLayout(1), setColor({ col1: "black", col2: "white" });
+            }}
+            className={`  text-${color.col1} `}
+          />
+          <RiLayoutGridFill
+            size={25}
+            onClick={() => {
+              setLayout(2), setColor({ col1: "white", col2: "black" });
+            }}
+            className={`  text-${color.col2} `}
+          />
+        </div>
+      </div>
+      <div
+        className={`grid grid-cols-${layout} sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 mt-3`}
+      >
+        {sarees.map((props) => (
           <Mainproduct key={props.id} props={props} />
         ))}
       </div>

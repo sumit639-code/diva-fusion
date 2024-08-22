@@ -17,7 +17,7 @@ const Bottombar = () => {
   const likeItem = useRecoilValue(likeState);
   const likeCount = useRecoilValue(likeItemCount);
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-pink-200 p-4 flex justify-around items-center rounded-t-xl shadow-lg">
+    <nav className="fixed bottom-0 left-0 right-0 bg-pink-600 bg-opacity-20 backdrop-blur-lg p-4 flex justify-around items-center rounded-t-xl shadow-lg">
       <Link href="/" className="text-black">
         <GoHome size={25} />
       </Link>

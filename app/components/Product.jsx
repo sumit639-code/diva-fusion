@@ -6,7 +6,7 @@ const Product = ({props}) => {
   return (
     <div >
       
-      <div className="bg-white p-4 rounded-xl shadow-sm w-48">
+      <div className="bg-white p-4 rounded-xl shadow-xl w-48">
         <img
           src="path-to-white-dress-image"
           alt="White Dress"

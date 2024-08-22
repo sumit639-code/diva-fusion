@@ -5,6 +5,8 @@ import { combined } from "@/Data/combinedata";
 import React, { useState, useEffect } from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { useRecoilState } from "recoil";
+import { MdOutlineStarPurple500 } from "react-icons/md";
+import Link from "next/link";
 
 const ProductPage = ({ params }) => {
   const [recoil, setRecoil] = useRecoilState(cartState);
@@ -63,20 +65,24 @@ const ProductPage = ({ params }) => {
   };
 
   return (
-    <div className="flex justify-center p-1">
+    <div className="flex justify-center p-1 font-primary">
       <div className="flex flex-col md:flex-row lg:flex-row md:space-x-16 lg:space-x-24 md:p-8 lg:p-12">
         {/* Image Section */}
-        <div className="flex-shrink-0 md:w-1/2 lg:w-1/2 p-4">
+        <div className="flex-shrink-0 md:w-1/2 lg:w-1/2 p-4 ">
           <img
             src={product.image}
             alt={product.alt}
-            className="w-full h-auto object-cover rounded-lg"
+            className="w-full h-auto object-cover rounded-lg bg-white"
           />
         </div>
 
         {/* Details Section */}
-        <div className="flex-1 p-4">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
+        <div className="flex-1 p-4 font-secondary">
+          <div className="flex items-center font-secondary text-sm">
+            <MdOutlineStarPurple500 className="text-yellow-500" />
+            <span>4.2 </span>
+          </div>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 font-primary">
             {product.title}
           </h1>
           <p className="text-gray-700 font-semibold text-sm md:text-base lg:text-lg mb-4">
@@ -85,14 +91,26 @@ const ProductPage = ({ params }) => {
           <p className="text-red-500 font-semibold text-lg md:text-xl lg:text-2xl mb-4">
             ₹{product.price}
           </p>
-          <button
-            onClick={handleClick}
-            className="w-full bg-red-400 text-white py-2 px-4 rounded-lg shadow hover:bg-red-500 flex items-center justify-center space-x-3"
-          >
-            <div>Add to cart</div>
-            <IoCartOutline />
-          </button>
 
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              onClick={handleClick}
+              className="w-full text-red-400 outline outline-2 transition-all py-2 px-4 rounded-lg shadow active:bg-red-500 active:text-white  active:scale-[0.9]  flex items-center justify-center space-x-3"
+            >
+              <div>Add to cart</div>
+              <IoCartOutline />
+            </button>
+
+            <Link
+              href={`https://api.whatsapp.com/send?phone=916371413645&text=Hello%20i%20want%20to%20buy%20${product.title}%20,the%20product%20price%20is%20₹${
+                product.price
+              }`}
+            >
+              <button className="w-full bg-red-400 transition-all text-white py-2 active:scale-[0.9] px-4 rounded-lg shadow hover:bg-red-500 flex items-center justify-center space-x-3">
+                Order Now
+              </button>
+            </Link>
+          </div>
           <button
             onClick={handleLikeClick}
             className={`mt-4 p-2 rounded-full absolute top-0 right-5 opacity-50 ${

@@ -13,6 +13,10 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    fontFamily: {
+      primary: ["Kaushan Script", "cursive", "sans serif"],
+      secondary:["Roboto","sans serif"]
+    },
   },
   plugins: [],
 };

@@ -23,8 +23,8 @@ const Product = ({ props }) => {
   console.log(props.image);
 
   return (
-    <div className="p-0">
-      <div className="bg-white border-2 relative border-gray-200 p-4 rounded-md shadow-sm max-w-xs mx-auto h-full sm:max-w-sm md:max-w-md lg:max-w-lg">
+    <div className="p-0 ">
+      <div className="bg-white border-2 relative border-gray-200  p-4 rounded-md shadow-sm max-w-xs mx-auto h-full sm:max-w-sm md:max-w-md lg:max-w-lg">
         <Link href={`/${props.id}`}>
           <img
             src={props.image}
@@ -40,7 +40,7 @@ const Product = ({ props }) => {
           onClick={handleLikeClick}
           className={`mt-4 p-2 rounded-full absolute top-0 right-5 opacity-50 ${
             liked ? "bg-red-500 text-white" : "bg-gray-300 text-gray-700"
-          } flex items-center justify-center space-x-2`}
+          } flex items-center justify-center space-x-2 transition-all active:scale-[0.85]`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
