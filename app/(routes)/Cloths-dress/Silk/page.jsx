@@ -15,13 +15,13 @@ const page = () => {
     col2: "black",
   });
   return (
-    <div className="mb-20 p-3 bg-gradient-to-b from-pink-400 to-fuchsia-50 font-primary">
+    <div className="mb-20 p-3 bg-gradient-to-b from-pink-300 to-fuchsia-50 font-primary">
       <div className=" flex justify-between">
         <Link href="/Category">
           {" "}
           <FaArrowLeft size={25} className="  text-white" />
         </Link>
-        <div className="text-white text-xl">Sarees</div>
+        <div className="text-white text-xl">Silk</div>
         <div className="flex space-x-2">
           {" "}
           <RiLayoutRowLine

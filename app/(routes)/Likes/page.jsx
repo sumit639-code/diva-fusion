@@ -8,7 +8,7 @@ const page = () => {
   const likeItem = useRecoilValue(likeState);
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-pink-400 transition-all to-fuchsia-50 font-primary p-4 mb-10">
+      <div className="min-h-screen bg-gradient-to-b from-pink-300 transition-all to-fuchsia-50 font-primary p-4 mb-10">
         <header className="flex justify-between items-center mb-6">
           <div className="text-xl font-bold text-white">Diva Fusion</div>
         </header>

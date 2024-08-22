@@ -4,10 +4,10 @@ import Link from "next/link";
 const page = () => {
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-400 to-fuchsia-50 p-4 font-primary">
+    <div className="min-h-screen bg-gradient-to-b from-pink-300 to-fuchsia-50 p-4 font-primary">
       <header className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold text-white">Categories</h2>
-        <button className="text-sm text-red-400">See All</button>
+        <button className="text-sm text-red-900">See All</button>
       </header>
 
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">

@@ -13,7 +13,7 @@ const CartPage = () => {
     return [item.title, " x ", item.quantity].join("");
   }
   return (
-    <div className="min-h-screen bg-pink-50 p-4 md:p-14 lg:px-60 pb-20 bg-gradient-to-b from-pink-400 to-fuchsia-50 font-primary">
+    <div className="min-h-screen bg-pink-50 p-4 md:p-14 lg:px-60 pb-20 bg-gradient-to-b from-pink-300 to-fuchsia-50 font-primary">
       <header className="flex justify-between items-center mb-6">
         <div className="text-xl font-bold text-white">Diva Fusion</div>
       </header>

@@ -1,15 +1,15 @@
 import React from "react";
 import Product from "./Product";
-import { Data } from "@/Data/data";
+
 import Link from "next/link";
-import Recomended from "./Recomended";
+
 import { FaArrowRightLong } from "react-icons/fa6";
-import { sarees } from "@/Data/saree";
-import { combined } from "@/Data/combinedata";
+
 import { Kurti } from "@/Data/kurti";
+import Image from "next/image";
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-400 to-fuchsia-50 p-4 pb-10 font-primary ">
+    <div className="min-h-screen bg-gradient-to-b from-pink-300 to-fuchsia-50 p-4 pb-10 font-primary ">
       <header className="flex justify-between items-center mb-6">
         <div className="text-xl font-bold text-white">Diva Fusion</div>
         <div className="flex space-x-4">
@@ -78,8 +78,11 @@ const HomePage = () => {
         <p className="text-xs mb-4 text-white z-10 font-secondary font-normal">
           Discount 60% for the first transaction.
         </p>
-        <img
-          src="./banner.jpg"
+        <Image
+          width={350}
+          height={150}
+          loading="lazy"
+          src="/banner.jpg"
           alt="Trending"
           className="w-full h-full opacity-25 absolute top-0 left-0"
         />
@@ -107,7 +110,7 @@ const HomePage = () => {
             className="flex flex-col items-center"
           >
             <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center shadow-lg">
-              <img src="./saree.png" alt="Skin Care" className="w-6 h-6" />
+              <Image src="/saree.png" width={100} height={100} Loading="lazy" alt="Skin Care" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Saree</p>
           </Link>
@@ -116,7 +119,7 @@ const HomePage = () => {
             className="flex flex-col items-center"
           >
             <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center shadow-lg">
-              <img src="./dress.png" alt="Make Up" className="w-6 h-6" />
+              <Image src="/dress.png" width={100} height={100} Loading="lazy" alt="Make Up" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Kurti</p>
           </Link>
@@ -125,7 +128,7 @@ const HomePage = () => {
             className="flex flex-col items-center"
           >
             <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center shadow-lg">
-              <img src="./necklace.png" alt="Fashion" className="w-6 h-6" />
+              <Image src="/necklace.png" width={100} height={100} Loading="lazy" alt="Fashion" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Jwellery</p>
           </Link>
@@ -134,7 +137,7 @@ const HomePage = () => {
             className="flex flex-col items-center"
           >
             <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center shadow-lg">
-              <img src="./silk.png" alt="Shoes" className="w-6 h-6" />
+              <Image src="/silk.png" width={100} height={100} Loading="lazy" alt="Shoes" className="w-6 h-6" />
             </div>
             <p className="text-xs mt-2 text-black">Silk</p>
           </Link>
@@ -154,7 +157,10 @@ const HomePage = () => {
             <Product props={fn} key={fn.id} />
           ))}
           <div className="bg-red-50 p-4 rounded-xl w-96 shadow-xl flex items-center justify-center">
-            <Link href="/recomended" className=" p-2 rounded-lg w-32 text-red-400 flex items-center justify-center">
+            <Link
+              href="/recomended"
+              className=" p-2 rounded-lg w-32 text-red-400 flex items-center justify-center"
+            >
               View all{" "}
               <FaArrowRightLong className="text-red-500 ml-2 animate-pulse " />
             </Link>

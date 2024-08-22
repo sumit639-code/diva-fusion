@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { useRecoilState } from "recoil";
 import { likeState } from "../state/atoms/Likestate.js";
+import Image from "next/image.js";
 
 const Product = ({ props }) => {
   const [likestate, setLikeState] = useRecoilState(likeState);
@@ -26,11 +27,15 @@ const Product = ({ props }) => {
     <div className="p-0 ">
       <div className="bg-white border-2 relative border-gray-200  p-4 rounded-md shadow-sm max-w-xs mx-auto h-full sm:max-w-sm md:max-w-md lg:max-w-lg">
         <Link href={`/${props.id}`}>
-          <img
+          <Image
             src={props.image}
+            width={150}
+            height={150}
             alt="White Dress"
             className="w-full h-44 object-contain rounded-xl mb-4"
             loading="lazy"
+            placeholder="empty"
+            style={{objectFit: "contain"}}
           />
           <h4 className="text-sm font-bold text-gray-800 mb-1">
             {props.title}

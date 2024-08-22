@@ -7,6 +7,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { useRecoilState } from "recoil";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import Link from "next/link";
+import Image from "next/image";
 
 const ProductPage = ({ params }) => {
   const [recoil, setRecoil] = useRecoilState(cartState);
@@ -69,8 +70,11 @@ const ProductPage = ({ params }) => {
       <div className="flex flex-col md:flex-row lg:flex-row md:space-x-16 lg:space-x-24 md:p-8 lg:p-12">
         {/* Image Section */}
         <div className="flex-shrink-0 md:w-1/2 lg:w-1/2 p-4 ">
-          <img
+          <Image
             src={product.image}
+            width={350}
+            height={350}
+            loading="lazy"
             alt={product.alt}
             className="w-full h-auto max-h-96 md:max-h-96 lg:max-h-96 object-contain rounded-lg bg-white"
           />
