@@ -72,7 +72,7 @@ const ProductPage = ({ params }) => {
           <img
             src={product.image}
             alt={product.alt}
-            className="w-full h-auto object-cover rounded-lg bg-white"
+            className="w-full h-auto max-h-96 md:max-h-96 lg:max-h-96 object-contain rounded-lg bg-white"
           />
         </div>
 

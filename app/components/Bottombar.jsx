@@ -17,14 +17,14 @@ const Bottombar = () => {
   const likeItem = useRecoilValue(likeState);
   const likeCount = useRecoilValue(likeItemCount);
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-pink-600 bg-opacity-20 backdrop-blur-lg p-4 flex justify-around items-center rounded-t-xl shadow-lg">
-      <Link href="/" className="text-black">
+    <nav className="fixed bottom-0 left-0 right-0 bg-pink-900 bg-opacity-30 backdrop-blur-lg p-4 flex justify-around items-center rounded-t-xl shadow-lg">
+      <Link href="/" className="text-white">
         <GoHome size={25} />
       </Link>
-      <Link href="/Category" className="text-black">
+      <Link href="/Category" className="text-white">
         <BiCategory size={25} />
       </Link>
-      <Link href="/Likes" className="text-black relative">
+      <Link href="/Likes" className="text-white relative">
         {likeItem.length === 0 ? null : (
           <span className="absolute -top-1 -right-2 bg-[#cd3a21] w-4 h-4 flex items-center justify-center rounded-full text-white text-xs transition-all duration-400">
             {likeCount}
@@ -32,7 +32,7 @@ const Bottombar = () => {
         )}
         <FaRegHeart size={22} />
       </Link>
-      <Link href="/Cart" className="text-black">
+      <Link href="/Cart" className="text-white">
         {cartItem.length === 0 ? null : (
           <span className="absolute top-0 right-0 mt-3 mr-10 bg-[#cd3a21] w-4 h-4 flex items-center justify-center rounded-full text-white text-xs transition-all duration-400">
             {itemCount}

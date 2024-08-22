@@ -28,14 +28,14 @@ const Cart = ({ props }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl p-4 shadow mb-4 flex items-center justify-between">
+    <div className="bg-white rounded-xl p-4 py-2 shadow mb-4 flex items-center justify-between">
       <img src={props.image} alt="Dress" className="w-16 h-16 rounded-xl" />
       <div className="flex flex-col justify-center flex-1 ml-4">
         <span className="text-lg font-semibold text-black">{props.title}</span>
-        <div className="flex items-center mt-2">
+        <div className="flex items-center mt-2 text-xs">
           <button
             onClick={() => handleDecreaseQuantity(props.id)}
-            className="px-2 py-1 border rounded-l-lg bg-gray-200 text-black"
+            className="px-2 py-[3px] border rounded-l-lg bg-gray-200 text-black"
           >
             -
           </button>
@@ -44,7 +44,7 @@ const Cart = ({ props }) => {
           </span>
           <button
             onClick={() => handleIncreaseQuantity(props.id)}
-            className="px-2 py-1 border rounded-r-lg bg-gray-200 text-black"
+            className="px-2 py-[3px] border rounded-r-lg bg-gray-200 text-black"
           >
             +
           </button>

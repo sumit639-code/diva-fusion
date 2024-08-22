@@ -20,7 +20,7 @@ const Product = ({ props }) => {
     }
   };
 
-  console.log(props.image);
+  // console.log(props.image);
 
   return (
     <div className="p-0 ">
@@ -30,6 +30,7 @@ const Product = ({ props }) => {
             src={props.image}
             alt="White Dress"
             className="w-full h-44 object-contain rounded-xl mb-4"
+            loading="lazy"
           />
           <h4 className="text-sm font-bold text-gray-800 mb-1">
             {props.title}

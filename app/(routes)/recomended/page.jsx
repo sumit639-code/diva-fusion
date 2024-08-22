@@ -7,10 +7,11 @@ import { FaArrowLeft } from "react-icons/fa6";
 import Link from "next/link";
 import { RiLayoutRowLine } from "react-icons/ri";
 import { RiLayoutGridFill } from "react-icons/ri";
+import { Kurti } from "@/Data/kurti";
 // Import data
 
 // Combine and shuffle data
-const combinedData = [...sarees, ...Silk];
+const combinedData = [...sarees, ...Silk,...Kurti];
 
 const shuffleArray = (array) => {
   const shuffledArray = array.slice(); // Create a copy to avoid mutating the original array
@@ -62,7 +63,7 @@ const page = () => {
       <div
         className={`grid grid-cols-${layout} sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 mt-3`}
       >
-        {sarees.map((props) => (
+        {shuffledData.map((props) => (
           <Mainproduct key={props.id} props={props} />
         ))}
       </div>

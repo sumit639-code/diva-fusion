@@ -4,6 +4,9 @@ import { Data } from "@/Data/data";
 import Link from "next/link";
 import Recomended from "./Recomended";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { sarees } from "@/Data/saree";
+import { combined } from "@/Data/combinedata";
+import { Kurti } from "@/Data/kurti";
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-400 to-fuchsia-50 p-4 pb-10 font-primary ">
@@ -147,7 +150,7 @@ const HomePage = () => {
           <FaArrowRightLong className="text-red-500 ml-2 animate-pulse" />
         </Link>
         <div className="flex space-x-4 overflow-x-scroll p-2">
-          {Data.map((fn) => (
+          {Kurti.map((fn) => (
             <Product props={fn} key={fn.id} />
           ))}
           <div className="bg-red-50 p-4 rounded-xl w-96 shadow-xl flex items-center justify-center">
